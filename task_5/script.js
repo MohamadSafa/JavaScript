@@ -1,13 +1,11 @@
-let array1 = [1,2,4,6,8,11,45,66,73,98,102];
+let numbers = [1,2,4,6,8,11,45,66,73,98,102];
 
-for (let i = 0; i < array1.length; i++) {
-    console.log(array1);
+for (let i = 0; i < numbers.length; i++) {
 
-const number = array1[i];
-if (number % 2 == 0) {
-    console.log(number + "is even");
+if (numbers[i] % 2 === 0) {
+    console.log("This number is even", numbers[i]);
 }  
     else {
-    console.log(number + "is odd");
+    console.log("This number is odd", numbers[i]);
 }
-}
+}   
