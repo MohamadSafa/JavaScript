@@ -1,4 +1,4 @@
-function add (num1, num2);{
+function add (num1, num2) {
    const x = num1 + num2;
    console.log (x);
    return x;
@@ -6,20 +6,20 @@ function add (num1, num2);{
 const result = add (88,10);
 console.log(result);
 
-function substract (num1, num2);{
+function substract (num1, num2){
     const x = num1 - num2;
     console.log (x);
     return x;
 }
 
-function multiply (num1,num2); {
+function multiply (num1,num2) {
     const x = num1 * num2;
     console.log (x);
     return x;
 
 }
 
-function divide (num1, num2); {
+function divide (num1, num2) {
     if (num2 !==0) {
     const x = num1 / num2;
     return x;
@@ -42,4 +42,3 @@ function myCalculator (operation, x, y){
     }
 }
 
-myCalculator ('/', 100, 4);
