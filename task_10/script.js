@@ -1,21 +1,29 @@
-// JavaScript
-const modal = document.getElementById("modal");
-const btn = document.getElementById("openBTN");
-const span = document.querySelector("#modal .close");
+let openModalButton = document.getElementById("openModalBtn")
 
-// Open the modal when the button is clicked
-btn.addEventListener('click', function() {
-  modal.style.display = "block";
+let modal = document.getElementById ("myModal") 
+
+//let closeBtn = document.querySelector("#myModal > div > span")
+//let closeBtn - document.getElementsByTagName("span")[0]
+let closeBtn = document.getElementsByClassName("close")[0]
+
+function openModal () {
+  modal.style.display = "block"
+}
+
+function closeModal () {
+  modal.style.display = "none"
+}
+
+openModalButton.addEventListener("click", function () {
+  //display the modal
+  openModal();
 });
 
-// Close the modal when the close button inside the modal is clicked
-span.onclick = function() {
-  modal.style.display = "none";
-};
+closeBtn.addEventListener("click", closeModal);
 
-// Close the modal when clicking outside the modal
-document.addEventListener('click', function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
+window.addEventListener("click", function (event) {
+  // if only i pressed the background of the modal > close the modal
+  if(event.target == modal) {
+    closeModal();
   }
 });
